@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="2.1"
+                 xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm
+                    http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd">
+    <named-native-query name="Partner.count">
+        <query><![CDATA[select count(*) from V_PARTNER]]></query>
+    </named-native-query>
+<named-stored-procedure-query name="Partner.saveNamed" procedure-name="as_partner_pckg.insupd_partner">
+    <parameter name="in_prt_id" class="java.lang.Long"/>
+    <parameter name="iv_firstname" class="java.lang.String"/>
+    <parameter name="iv_surname" class="java.lang.String"/>
+    <parameter name="iv_person_in" class="java.lang.String"/>
+    <parameter name="id_birth_date" class="java.sql.Date"/>
+    <parameter name="iv_userlogin" class="java.lang.String"/>
+    <parameter mode="OUT" name="on_prt_id" class="java.lang.Long"/>
+</named-stored-procedure-query>
+
+</entity-mappings>

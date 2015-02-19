@@ -1,0 +1,14 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           targetNamespace="http://generali.com/gef/schemas">
+    <xs:element name="savePartnerRequest">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="firstName" type="xs:string"/>
+                <xs:element name="surname" type="xs:string"/>
+                <xs:element name="birthCertNr" type="xs:string"/>
+                <xs:element name="birthDate" type="xs:date"/>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
